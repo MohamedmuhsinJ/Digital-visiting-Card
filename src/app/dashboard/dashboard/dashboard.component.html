@@ -1,0 +1,63 @@
+<div class="w-full flex h-full bg-sky-400 ">
+
+    <div class="w-4/12 p-2 h-screen bg-white">
+        <h1 class="text-center text-2xl p-3 mb-3b  font-bold">Add details</h1>
+
+        <label for="" class=" text-center text-xl mb-2">Enter Your firstname</label>
+        <input [(ngModel)]="firstName" type="text"
+            class=" text-xl mb-3 w-full border-sky-600 hover:outline-dashed outline-double h-10 rounded px-2 "
+            placeholder="First Name" name="" id="">
+        <label for="" class=" text-center text-xl mb-2">Enter Your last name</label>
+        <input [(ngModel)]="lastName" type="text"
+            class=" text-xl mb-3 w-full border-sky-600 hover:outline-dashed outline-double h-10 rounded px-2 "
+            placeholder="Last Name" name="" id="">
+
+        <label for="" class=" text-center text-xl mb-2">Enter your Age</label>
+        <input [(ngModel)]="age" type="age"
+            class=" text-xl mb-3 w-full border-sky-600 hover:outline-dashed outline-double h-10 rounded px-2 "
+            placeholder="Age" name="" id="">
+        <label class=" text-center text-xl mb-2"> Email </label>
+        <input [(ngModel)]="email" type="text"
+            class=" text-xl mb-3 w-full border-sky-600 hover:outline-dashed outline-double h-10 rounded px-2 "
+            placeholder="Email" name="" id="">
+        <label for="" class=" text-center text-xl mb-2">Contact number</label>
+        <input [(ngModel)]="mobile" type="mobile"
+            class=" text-xl mb-3 w-full border-sky-600 hover:outline-dashed outline-double h-10 rounded px-2 "
+            placeholder="Contact Number" name="" id="">
+
+
+
+        <label for="">card color </label>
+        <div class=" flex h-10 justify-between">
+
+            <div class="w-2/12 rounded bg-red-400  " (click)="color(1)" style="cursor: pointer"></div>
+
+
+
+            <div class="w-2/12 rounded bg-slate-400 " (click)="color(2)" style="cursor: pointer"></div>
+
+
+
+
+            <div class=" w-2/12 rounded bg-orange-400" (click)="color(3)" style="cursor: pointer"> </div>
+            <div class="w-2/12 rounded bg-lime-400" (click)="color(4)" style="cursor: pointer"> </div>
+            <div class="w-2/12 rounded bg-pink-400" (click)="color(5)" style="cursor: pointer"> </div>
+
+
+        </div>
+    </div>
+    <div class="w-8/12 flex p-2 items-center justify-center" >
+        <div  style="cursor: none" class="bg-white w-6/12  "  [ngClass]="{'bg-red-200': bgColor===1,'bg-slate-200': bgColor===2,'bg-orange-200': bgColor===3,'bg-lime-200':bgColor===4,'bg-pink-200':bgColor===5}">
+            <div class="w-full ">
+                <h1 class="p-2 text-2xl text-center font-bold">user card</h1>
+                <div class="text-left ml-4 p-3 text-xl font-semibold italic">
+                    <p>Name:{{ firstName +' '+ lastName }}</p>
+                    <p>Age:{{age}}</p>
+                    <p>Email:{{email}}</p>
+                    <p>Phone:{{mobile}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
